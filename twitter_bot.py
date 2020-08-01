@@ -22,7 +22,7 @@ def retweet_tweets_with_hashtag(api, need_hashtags):
                     if tweet.user.id != api.me().id:
                         api.retweet(tweet.id)
                         logger.info(f"Retweeted tweet from {tweet.user.name}")
-#                         time.sleep(1)
+                        time.sleep(1)
             except tweepy.TweepError:
                 logger.error("Error on retweet", exc_info=True)
     else:
@@ -34,4 +34,4 @@ def retweet_tweets_with_hashtag(api, need_hashtags):
 while True:
         retweet_tweets_with_hashtag(api, ["#weeklycodinggoals", "#100daysofcode"])
         logger.info("Waiting...")
-        time.sleep(300)
+        time.sleep(30)
