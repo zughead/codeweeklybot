@@ -32,6 +32,6 @@ def retweet_tweets_with_hashtag(api, need_hashtags):
 
 
 while True:
-        retweet_tweets_with_hashtag(api, ["#weeklycodinggoals", "#100daysofcode"])
+        retweet_tweets_with_hashtag(api, ["#weeklycodinggoals"])
         logger.info("Waiting...")
         time.sleep(30)
